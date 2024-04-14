@@ -4,8 +4,8 @@ import cors from 'cors';
 const app = express();
 const port = 3000;
 
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
 
 
 app.listen(port, (error) => {
@@ -13,11 +13,20 @@ app.listen(port, (error) => {
 })
 
 app.get('/task', (request, response) => {
-    const test = [
+    const task = [
         {
-        id: 1, 
-        element: 'Faire la vaisselle'
-        }
+            id: 1, 
+            element: 'Faire la vaisselle'
+        },
+        {
+            id: 2,
+            element: 'Sortir les poubelles'
+        },
+        {
+            id: 3,
+            element: 'Passer l\'aspirateur'
+        },
+
     ];
-    response.send(test);
+    response.send(task);
 })
