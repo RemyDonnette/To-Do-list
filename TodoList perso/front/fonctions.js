@@ -80,7 +80,7 @@ export function createLine(e) {
         }
     })
 
-    icon.addEventListener('click', () => {
+    label2.addEventListener('click', () => {
         ligne.remove()
     })
 }
